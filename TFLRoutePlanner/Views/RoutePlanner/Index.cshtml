@@ -1,0 +1,88 @@
+﻿@model TFLRoutePlanner.ViewModels.RoutePlan
+@{
+}
+
+<form method="post" id="frmRoutePlanner" asp-controller="RoutePlanner">
+  <fieldset>
+     <div class="mb-3">
+        <legend>TFL Route Planner</legend>
+    </div>
+    
+      <div class="mb-3">
+        <label for="inputStart" class="form-label">Start</label>
+        <input type="text" id="inputStart" class="form-control" aria-labelledby="startHelpBlock" placeholder="Station Name" asp-for="request.source">
+        <div id="startHelpBlock" class="form-text">
+
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="inputEnd" class="form-label">End</label>
+        <input type="text" id="inputEnd" class="form-control" aria-labelledby="endHelpBlock" placeholder="Station Name" asp-for="request.destination">
+        <div id="endHelpBlock" class="form-text">
+
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="inputViaStation" class="form-label">Via (optional)</label>
+        <input type="text" id="inputViaStation" class="form-control" aria-labelledby="viaHelpBlock" placeholder="Station Name" asp-for="request.viaStation">
+        <div id="viaHelpBlock" class="form-text">
+
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="inputExStation" class="form-label">Exclude (optional)</label>
+        <input type="text" id="inputExStation" class="form-control" aria-labelledby="excludeHelpBlock" placeholder="Station Name" asp-for="request.excludeStation">
+        <div id="excludeHelpBlock" class="form-text">
+
+        </div>
+      </div>
+      <div class="col-md-auto">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+  </fieldset>
+ </form>
+
+ @if(ViewBag.naturalLanguageOutput != null){
+
+   <div class="container">
+    <h1>Suggested Journey Route</h1>
+    
+    <div class="route">
+      @for (int i = 0; i < ViewBag.naturalLanguageOutput.Count; i++) {
+          <div class="route-item">
+            <p class="route-text">@ViewBag.naturalLanguageOutput[i].ToString()</p>
+          </div>
+      }
+    </div>
+    </div>
+}else if(ViewBag.exception != null)
+{
+  <div class="container">
+    <h1>Error Message</h1>
+    
+    <p>An error occurred while processing your request.</p>
+    
+    <p class="error-message">@ViewBag.exception</p>
+  </div>    
+}
+<div class="col-md-auto">
+    &nbsp;
+</div>
+<div class="container">
+ <ul class="list-group">
+  <li class="list-group-item list-group-item-secondary">LIST OF STATIONS</li>
+  <li class="list-group-item">EMBANKMENT</li>
+  <li class="list-group-item">CHARING CROSS</li>
+  <li class="list-group-item">LEICESTER SQUARE</li>
+  <li class="list-group-item">TOTTENHAM COURT ROAD</li>
+  <li class="list-group-item">COVENT GARDEN</li>
+  <li class="list-group-item">HOLBORN</li>
+  <li class="list-group-item">CHANCERY LANE</li>
+  <li class="list-group-item">ST PAULS</li>
+  <li class="list-group-item">MONUMENT / BANK</li>
+  <li class="list-group-item">MANSION HOUSE</li>
+  <li class="list-group-item">CANNON STREETK</li>
+  <li class="list-group-item">BLACKFRIARS</li>
+  <li class="list-group-item">TEMPLE</li>
+</ul>
+</div>

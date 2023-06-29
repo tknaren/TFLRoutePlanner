@@ -1,0 +1,83 @@
+{
+  "routes": [
+    {
+      "start": "CHARING CROSS",
+      "end": "EMBANKMENT",
+      "weight": 0.37,
+      "line": "BLACK / BROWN"
+    },
+    {
+      "start": "LEICESTER SQUARE",
+      "end": "CHARING CROSS",
+      "weight": 0.46,
+      "line": "BLACK"
+    },
+    {
+      "start": "LEICESTER SQUARE",
+      "end": "TOTTENHAM COURT ROAD",
+      "weight": 0.4,
+      "line": "BLACK"
+    },
+    {
+      "start": "LEICESTER SQUARE",
+      "end": "COVENT GARDEN",
+      "weight": 0.25,
+      "line": "BLUE"
+    },
+    {
+      "start": "COVENT GARDEN",
+      "end": "HOLBORN",
+      "weight": 0.59,
+      "line": "BLUE"
+    },
+    {
+      "start": "HOLBORN",
+      "end": "CHANCERY LANE",
+      "weight": 0.4,
+      "line": "RED"
+    },
+    {
+      "start": "CHANCERY LANE",
+      "end": "ST PAULS",
+      "weight": 1.03,
+      "line": "RED"
+    },
+    {
+      "start": "ST PAULS",
+      "end": "MONUMENT / BANK",
+      "weight": 0.74,
+      "line": "RED"
+    },
+    {
+      "start": "CANNON STREET",
+      "end": "MONUMENT / BANK",
+      "weight": 0.34,
+      "line": "YELLOW / GREEN"
+    },
+    {
+      "start": "MANSION HOUSE",
+      "end": "CANNON STREET",
+      "weight": 0.31,
+      "line": "YELLOW / GREEN"
+    },
+    {
+      "start": "MANSION HOUSE",
+      "end": "BLACKFRIARS",
+      "weight": 0.61,
+      "line": "YELLOW / GREEN"
+    },
+    {
+      "start": "BLACKFRIARS",
+      "end": "TEMPLE",
+      "weight": 0.76,
+      "line": "YELLOW / GREEN"
+    },
+    {
+      "start": "EMBANKMENT",
+      "end": "TEMPLE",
+      "weight": 0.71,
+      "line": "YELLOW / GREEN"
+    }
+
+  ]
+}
