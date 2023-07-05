@@ -5,16 +5,23 @@ jobs:
     name: ubuntu-job
     runs-on: ubuntu-latest
     steps:
-      name: print date
-      run: print date
+    - name: print date
+      run: date
   job2:
     name: windows-job
     runs-on: windows-latest
+    steps:
+    - name: print date
+      run: date    
   job3:
     name: macos-job
     runs-on: macos-latest
+    steps:
+    - name: print date
+      run: date    
   job4:
     name: windows-job-custom
     runs-on: windows-latest
+    needs: [job1, job2, job3]
     
     
