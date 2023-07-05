@@ -4,6 +4,9 @@ jobs:
   job1: 
     name: ubuntu-job
     runs-on: ubuntu-latest
+    steps:
+      name: print date
+      run: print date
   job2:
     name: windows-job
     runs-on: windows-latest
