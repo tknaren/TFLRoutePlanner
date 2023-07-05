@@ -1,0 +1,17 @@
+name: custom-workflow
+on: push
+jobs: 
+  job1: 
+    name: ubuntu-job
+    runs-on: ubuntu-latest
+  job2:
+    name: windows-job
+    runs-on: windows-latest
+  job3:
+    name: macos-job
+    runs-on: macos-latest
+  job4:
+    name: windows-job-custom
+    runs-on: windows-latest
+    
+    
